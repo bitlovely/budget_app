@@ -21,7 +21,6 @@ export async function GET(req: NextRequest) {
       const [rows]: any = await db.query(
         "SELECT amount FROM income LIMIT 1"
       );
-      console.log([rows[0]], 'bug');
       return NextResponse.json(rows[0]);
     }
 
@@ -48,7 +47,6 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
 
     if (body.action === "addIncome") {
-        console.log('addIncome', body.amount);
       await db.query(
         "UPDATE income SET amount = amount + ?",
         [body.amount]
