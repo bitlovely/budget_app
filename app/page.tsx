@@ -11,8 +11,8 @@ type Envelope = {
 export default function BudgetPage() {
   const [income, setIncome] = useState<number>(0);
   const [envelopes, setEnvelopes] = useState<Envelope[]>([]);
-  const [incomeInput, setIncomeInput] = useState("");
-  const [newEnvelope, setNewEnvelope] = useState("");
+  const [incomeInput, setIncomeInput] = useState<string>("");
+  const [newEnvelope, setNewEnvelope] = useState<string>("");
 
   // ---------- LOAD DATA ----------
   const loadData = async () => {

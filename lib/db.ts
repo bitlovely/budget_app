@@ -15,7 +15,7 @@ export function getDb() {
         queueLimit: 0,
       });
     } catch (err) {
-      console.error("❌ Failed to create MySQL pool:", err);
+      console.error("Failed to create MySQL pool:", err);
       pool = null;
     }
   }

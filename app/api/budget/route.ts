@@ -34,7 +34,7 @@ export async function GET(req: NextRequest) {
       { status: 400 }
     );
   } catch (err) {
-    console.error("❌ DB GET error:", err);
+    console.error("DB GET error:", err);
     return dbError();
   }
 }
@@ -97,7 +97,7 @@ export async function POST(req: NextRequest) {
       { status: 400 }
     );
   } catch (err) {
-    console.error("❌ DB POST error:", err);
+    console.error("DB POST error:", err);
     return dbError();
   }
 }
